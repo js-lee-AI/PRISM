@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "PRISM: code for Predicting and Repairing Merge Collapse in Large Language Models"
+type: software
+authors:
+  - family-names: Lee
+    given-names: Jungseob
+  - family-names: Lee
+    given-names: Seungyoon
+  - family-names: Eo
+    given-names: Sugyeong
+  - family-names: Moon
+    given-names: Hyeonseok
+  - family-names: Seo
+    given-names: Jaehyung
+  - family-names: Lim
+    given-names: Heuiseok
+repository-code: "https://github.com/js-lee-AI/PRISM"
+license: MIT
+version: "0.1.0"
+date-released: "2026-09-28"
+keywords:
+  - "model merging"
+  - "task arithmetic"
+  - "large language models"
+preferred-citation:
+  type: article
+  title: "Predicting and Repairing Merge Collapse in Large Language Models"
+  authors:
+    - family-names: Lee
+      given-names: Jungseob
+    - family-names: Lee
+      given-names: Seungyoon
+    - family-names: Eo
+      given-names: Sugyeong
+    - family-names: Moon
+      given-names: Hyeonseok
+    - family-names: Seo
+      given-names: Jaehyung
+    - family-names: Lim
+      given-names: Heuiseok
+  year: 2026
