@@ -46,6 +46,27 @@ jobs:
       - name: Tests
         run: pytest -q
 
+  merge:
+    name: torch path against the numpy core (CPU torch, merge extra)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - name: Install CPU torch, then the package with the merge extra
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -e ".[merge,test]"
+      - name: The merge extra imports
+        run: python -c "import torch, safetensors, transformers, huggingface_hub; print(torch.__version__)"
+      - name: Tests, with the torch path against the numpy core
+        run: pytest -q -rs
+
   install:
     name: clean install, used from outside the checkout
     runs-on: ubuntu-latest

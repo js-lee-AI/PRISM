@@ -30,9 +30,11 @@ def test_table4():
 def test_table18():
     out = run("table18_rival_statistics.py")
     assert "c sqrt(I/K) (used)            0.98    0.83x  predictive" in out
-    assert "c sqrt(P/K) (total power)     1.00   21.21x  separates" in out
+    assert "c sqrt(P/K) (total power)     1.00    21.2x  separates" in out
+    assert "c sqrt(S/K) (signal power)    1.00    23.3x  separates" in out
     assert "1 - CR (mean incoherence)     0.08   <0.01x  anti-predictive" in out
     assert "rho (cancellation ratio)      0.25    0.02x  anti-predictive" in out
+    assert "All five rows match Table 18." in out
 
 
 def test_screened_pairs():

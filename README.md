@@ -1,14 +1,8 @@
 <p align="center">
-  <img src="assets/banner.png" width="100%" alt="PRISM, predict which merges collapse and repair them without data" />
+  <img src="assets/banner.png" width="100%" alt="PRISM, predicting and repairing merge collapse in large language models" />
 </p>
 
 <div align="center">
-
-# PRISM
-
-### Predict which merges collapse, and repair them without data
-
-<em>Predicting and Repairing Merge Collapse in Large Language Models</em>
 
 [![Code MIT](https://img.shields.io/badge/Code-MIT-green.svg)](LICENSE)
 [![Paper CC BY 4.0](https://img.shields.io/badge/Paper-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
@@ -89,7 +83,7 @@ This runs on a CPU in well under a second and downloads nothing. The same code i
 | `pip install "prism-merge[eval] @ git+https://github.com/js-lee-AI/PRISM.git"` | accelerate, datasets, lm-evaluation-harness | `experiments/evaluate.py` |
 | `git clone` and then `pip install -e ".[merge,eval,plot,test]"` | matplotlib, pytest | `experiments/`, `data/` and `tests/` |
 
-The paper's merges and evaluations ran with Python 3.11.14, PyTorch 2.4.0, Transformers 4.44.1, lm-evaluation-harness 0.4.11 and CUDA 12.1 on NVIDIA A100 80GB GPUs. CI runs the CPU tests on Python 3.10 and 3.13.
+The paper's merges and evaluations ran with Python 3.11.14, PyTorch 2.4.0, Transformers 4.44.1, lm-evaluation-harness 0.4.11 and CUDA 12.1 on NVIDIA A100 80GB GPUs. CI runs the CPU tests on Python 3.10 and 3.13, and the torch path against the numpy core with CPU torch on Python 3.12.
 
 ## Usage
 
@@ -328,7 +322,7 @@ Specialists fine-tuned from one shared base, stored as safetensors with Hugging 
 <details>
 <summary><b>Why do my numbers differ from the paper?</b></summary>
 
-The statistics sum over billions of coordinates, so a CPU and a GPU order the sums differently and agree only to the printed digits, as the screen above does for Table 4. The six-task means depend on the lm-evaluation-harness version and on the subsample and seed that `experiments/evaluate.py` sets by default. The signal-power margin that `experiments/table18_rival_statistics.py` prints differs from Table 18 in its last digit, because the script recovers total power with the 10<sup>-10</sup> stabilizer of the coherence ratio as Appendix J writes it.
+The statistics sum over billions of coordinates, so a CPU and a GPU order the sums differently and agree only to the printed digits, as the screen above does for Table 4. The six-task means depend on the lm-evaluation-harness version and on the subsample and seed that `experiments/evaluate.py` sets by default.
 
 </details>
 
