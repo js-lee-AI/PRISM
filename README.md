@@ -16,6 +16,12 @@
 
 </div>
 
+<p align="center">
+  <a href="https://js-lee-ai.github.io/PRISM/#race"><img src="assets/replay.gif" width="100%" alt="Three merges of the Math and Coder specialists of Qwen2.5-7B answer HumanEval problem 89. The PRISM merge writes the function in 166 tokens and passes the unit tests. The TIES-Merging and Task Arithmetic merges keep repeating one line up to the limit of 2,048 tokens and fail them" /></a>
+</p>
+
+<p align="center"><em>Qwen2.5-7B, the Math and Coder specialists merged by each method. The <a href="https://js-lee-ai.github.io/PRISM/#race">project page</a> replays it live.</em></p>
+
 ---
 
 ## News
