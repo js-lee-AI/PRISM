@@ -17,10 +17,10 @@
 </div>
 
 <p align="center">
-  <a href="https://js-lee-ai.github.io/PRISM/#race"><img src="assets/replay.gif" width="100%" alt="Three merges of the Math and Coder specialists of Qwen2.5-7B answer HumanEval problem 89. The PRISM merge writes the function in 166 tokens and passes the unit tests. The TIES-Merging and Task Arithmetic merges keep repeating one line up to the limit of 2,048 tokens and fail them" /></a>
+  <a href="https://js-lee-ai.github.io/PRISM/#race"><img src="assets/replay.gif" width="100%" alt="PRISM scores six candidate merges from their weights alone before any of them is evaluated. Three score above the threshold of 1.9 (5.19, 4.24 and 4.17, in units of 10⁻³) and are predicted destructive. Three score far below it (0.089, 0.082 and 0.025) and are predicted harmless. The six-task means then appear. On the flagged merges the plain average falls well below the base model (35.8 against 56.1, 49.7 and 53.7 against 68.1) and PRISM brings it back (55.9, 67.7 and 67.6). On the other three the plain average stays at the base or above it (62.6 against 59.3, 68.0 against 68.1, 57.8 against 57.3)" /></a>
 </p>
 
-<p align="center"><em>Qwen2.5-7B, the Math and Coder specialists merged by each method. The <a href="https://js-lee-ai.github.io/PRISM/#race">project page</a> replays it live.</em></p>
+<p align="center"><em>Six merges predicted before evaluation, scores in units of 10<sup>−3</sup> against a threshold of 1.9. The <a href="https://js-lee-ai.github.io/PRISM/#race">project page</a> replays it live.</em></p>
 
 ---
 
